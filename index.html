@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Clear Foul Language</h2>
+        <input id="inp-va" type="text" placeholder="Type something...">
+        <button onclick="clearFoul()">Submit</button>
+        <h2>Result</h2>
+        <p id="displayNewText"></p>
+    </div>
+    
+</body>
+</html>
+<script>
+    
+    function clearFoul() {
+    let inputText = document.getElementById("inp-va").value;
+
+    inputText = inputText.replaceAll('fool', 'xxxxx');
+    inputText = inputText.replaceAll('shit', 'xxxxx');
+    inputText = inputText.replaceAll('foolish', 'xxxxx');
+    
+    document.getElementById("displayNewText").innerText = inputText
+
+}
+</script>
